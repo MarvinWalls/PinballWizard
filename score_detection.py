@@ -1,7 +1,7 @@
 import cv2
 import pytesseract
 import re
-import os  # Import the os module for file operations
+import os
 from preprocess import preprocess_for_ocr
 
 # Set the Tesseract executable path
@@ -13,10 +13,14 @@ BALL_COUNT_AREA = (579, 201, 30, 29)
 
 def read_text_from_area(img, coords):
     processed_img = preprocess_for_ocr(img, coords)
+    save_image(processed_img, "Debugging", "processed_for_ocr.png")  # Save processed image for debugging
     try:
-        text = pytesseract.image_to_string(processed_img, config='--psm 7', timeout=10)  # Set a timeout
+        text = pytesseract.image_to_string(processed_img, config='--psm 7', timeout=20)  # Increase timeout
     except pytesseract.TesseractError as e:
         print(f"Error reading text with Tesseract: {e}")
+        text = ""
+    except Exception as e:
+        print(f"Unexpected error during OCR: {e}")
         text = ""
     return text.strip()
 

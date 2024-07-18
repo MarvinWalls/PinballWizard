@@ -2,22 +2,18 @@ import cv2
 import numpy as np
 import os
 
-
 def save_image(image, folder, filename):
     if not os.path.exists(folder):
         os.makedirs(folder)
     cv2.imwrite(os.path.join(folder, filename), image)
 
-
 def resize_image(image, width, height):
     resized_image = cv2.resize(image, (width, height))
     return resized_image
 
-
 def convert_to_grayscale(image):
     grayscale_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     return grayscale_image
-
 
 def apply_canny_edge_detection(image, sigma=0.33):
     v = np.median(image)
@@ -25,7 +21,6 @@ def apply_canny_edge_detection(image, sigma=0.33):
     upper = int(min(255, (1.0 + sigma) * v))
     edged_image = cv2.Canny(image, lower, upper)
     return edged_image
-
 
 def preprocess_screen(screen, width, height, canny=False):
     if screen is None:
@@ -46,7 +41,6 @@ def preprocess_screen(screen, width, height, canny=False):
 
     return grayscale_screen
 
-
 def save_preprocessed_screen(image, folder, base_filename, timestamp, quality=95):
     filepath = os.path.join(folder, f"{base_filename}-{timestamp}.jpg")
     os.makedirs(folder, exist_ok=True)
@@ -55,7 +49,6 @@ def save_preprocessed_screen(image, folder, base_filename, timestamp, quality=95
         image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
     cv2.imwrite(filepath, image, [int(cv2.IMWRITE_JPEG_QUALITY), quality])
     return filepath
-
 
 def preprocess_for_ocr(img, coords):
     # Extract the region of interest (ROI) from the image based on the given coordinates
