@@ -26,6 +26,9 @@ def process_frame(window_title, templates, reward_system, last_action, action_in
         score_text = read_text_from_area(preprocessed_screen, SCORE_AREA)
         ball_count_text = read_text_from_area(preprocessed_screen, BALL_COUNT_AREA)
 
+        print(f"Text read from area {SCORE_AREA}: {score_text}\n")
+        print(f"Text read from area {BALL_COUNT_AREA}: {ball_count_text}\n")
+
         print(f"Raw OCR score text: {score_text}, Raw OCR ball count text: {ball_count_text}")
 
         score = parse_number_from_text(score_text)
@@ -54,6 +57,8 @@ def process_frame(window_title, templates, reward_system, last_action, action_in
         cv2.imshow('Detected Objects', image_with_detections)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             return image_with_detections, last_action
+
+        return image_with_detections, last_action
     else:
         print("Screen capture failed.")
-    return np.zeros((480, 640, 3), dtype=np.uint8), last_action
+        return np.zeros((480, 640, 3), dtype=np.uint8), last_action

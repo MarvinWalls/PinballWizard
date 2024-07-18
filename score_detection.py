@@ -1,7 +1,7 @@
 import cv2
 import pytesseract
 import re
-import os
+import os  # Import the os module for file operations
 from preprocess import preprocess_for_ocr
 
 # Set the Tesseract executable path
@@ -13,22 +13,22 @@ BALL_COUNT_AREA = (579, 201, 30, 29)
 
 def read_text_from_area(img, coords):
     processed_img = preprocess_for_ocr(img, coords)
-    save_image(processed_img, "Debugging", "processed_for_ocr.png")  # Save processed image for debugging
     try:
-        text = pytesseract.image_to_string(processed_img, config='--psm 7', timeout=20)  # Increase timeout
+        text = pytesseract.image_to_string(processed_img, config='--psm 7', timeout=10)  # Set a timeout
     except pytesseract.TesseractError as e:
         print(f"Error reading text with Tesseract: {e}")
         text = ""
-    except Exception as e:
-        print(f"Unexpected error during OCR: {e}")
-        text = ""
+    print(f"Text read from area {coords}: {text}")
     return text.strip()
 
 def parse_number_from_text(text):
     match = re.search(r'\d+', text)
     if match:
-        return int(match.group())
+        number = int(match.group())
+        print(f"Parsed number from text '{text}': {number}")
+        return number
     else:
+        print(f"Could not parse number from text '{text}', returning 0")
         return 0  # Ensures a number is always returned, preventing TypeError
 
 # This function is just for debugging purposes, to save the cropped areas as images

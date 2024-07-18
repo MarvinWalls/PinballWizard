@@ -50,27 +50,42 @@ def save_preprocessed_screen(image, folder, base_filename, timestamp, quality=95
     cv2.imwrite(filepath, image, [int(cv2.IMWRITE_JPEG_QUALITY), quality])
     return filepath
 
-def preprocess_for_ocr(img, coords):
-    # Extract the region of interest (ROI) from the image based on the given coordinates
-    x, y, w, h = coords
-    cropped_img = img[y:y + h, x:x + w]
+import cv2
+import numpy as np
 
-    # Check if the cropped image is already in grayscale
-    if cropped_img.ndim == 2:
+import cv2
+import numpy as np
+
+def preprocess_for_ocr(img, coords):
+    # Crop the image to the region of interest
+    x, y, w, h = coords
+    cropped_img = img[y:y+h, x:x+w]
+
+    # Check if the image has more than one channel
+    if len(cropped_img.shape) == 2 or cropped_img.shape[2] == 1:
         gray_img = cropped_img
     else:
-        # Convert the cropped image to grayscale if it has more than one channel
+        # Convert to grayscale
         gray_img = cv2.cvtColor(cropped_img, cv2.COLOR_BGR2GRAY)
 
-    # Apply adaptive thresholding to the grayscale image
-    adaptive_thresh_img = cv2.adaptiveThreshold(
-        gray_img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2
-    )
+    # Apply GaussianBlur to reduce noise
+    blurred_img = cv2.GaussianBlur(gray_img, (5, 5), 0)
 
-    # Resize the processed image to enhance OCR accuracy
-    resized_img = cv2.resize(adaptive_thresh_img, None, fx=2, fy=2, interpolation=cv2.INTER_LINEAR)
+    # Apply thresholding to get a binary image
+    _, binary_img = cv2.threshold(blurred_img, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
-    # Optionally save the image for debugging
-    save_image(resized_img, "Debugging", 'debug_preprocessed_for_ocr.png')
+    # Increase contrast
+    alpha = 1.5  # Simple contrast control
+    beta = 0    # Simple brightness control
+    contrasted_img = cv2.convertScaleAbs(binary_img, alpha=alpha, beta=beta)
 
-    return resized_img
+    # Sharpen the image
+    kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
+    sharpened_img = cv2.filter2D(contrasted_img, -1, kernel)
+
+    # Save the processed image for debugging
+    cv2.imwrite("Debugging/debug_preprocessed_for_ocr.png", sharpened_img)
+
+    return sharpened_img
+
+
