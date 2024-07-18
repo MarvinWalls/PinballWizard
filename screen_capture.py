@@ -7,10 +7,13 @@ from mss import mss
 # Ensure compatibility with TensorFlow's functions
 tf.compat.v1.enable_eager_execution()
 
-
 # Function to capture the screen with a timestamp and resize it to 640x480
 def capture_screen(window_title, save_dir):
     window_handle = win32gui.FindWindow(None, window_title)
+    if not window_handle:
+        print(f"Window with title '{window_title}' not found.")
+        return None, None
+
     x1, y1, x2, y2 = win32gui.GetWindowRect(window_handle)
 
     with mss() as sct:
@@ -23,9 +26,6 @@ def capture_screen(window_title, save_dir):
         resized_screen_tensor = tf.image.resize(screen_tensor, [480, 640])
         # Convert back to a NumPy array for saving to file
         resized_screen_np = resized_screen_tensor.numpy().astype(np.uint8)
-
-        # Convert to an OpenCV-compatible format (numpy array)
-        current_frame = np.array(resized_screen_np)
 
         timestamp = datetime.now().strftime("%Y%m%d-%H%M%S%f")
         filename = f"pinball_screenshot_{timestamp}.png"
@@ -41,11 +41,10 @@ def capture_screen(window_title, save_dir):
 
         return resized_screen_np, timestamp
 
-
 # Usage example
 if __name__ == "__main__":
     window_title = "3D Pinball for Windows - Space Cadet"
-    save_dir = "C:/Users/marvi/Pinball Wizard/Screenshots"
+    save_dir = r"C:/Users/marvi/Pinball Wizard/Screenshots"
 
     screen, timestamp = capture_screen(window_title, save_dir)
     if screen is not None:

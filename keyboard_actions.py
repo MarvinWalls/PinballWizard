@@ -3,9 +3,11 @@ import pyautogui
 # Define the actions as functions
 def press_key(key):
     pyautogui.keyDown(key)
+    print(f"Key down: {key}")
 
 def release_key(key):
     pyautogui.keyUp(key)
+    print(f"Key up: {key}")
 
 def press_left_flipper():
     press_key('a')
@@ -36,11 +38,14 @@ def press_bottom_table_bump():
 
 def release_bottom_table_bump():
     release_key('Up')
+
 def press_enter():
     pyautogui.press('enter')
+    print("Pressed: enter")
 
 def press_f2():
     pyautogui.press('f2')
+    print("Pressed: f2")
 
 def press_plunger():
     press_key('space')
@@ -53,24 +58,12 @@ def no_action():
 
 # Updated perform_action function to map integer actions to action functions
 def perform_action(action):
-    actions = {
-        0: no_action,
-        1: press_left_flipper,
-        2: release_left_flipper,
-        3: press_right_flipper,
-        4: release_right_flipper,
-        5: press_plunger,
-        6: release_plunger,
-        7:press_left_table_bump,
-        8:release_left_table_bump,
-        9:press_right_table_bump,
-        10:release_right_table_bump,
-        11:press_bottom_table_bump,
-        12:release_bottom_table_bump
-    }
-
-    action_function = actions.get(action)
-    if action_function:
-        action_function()
-    else:
-        print(f"Unknown action: {action}")
+    actions = [
+        no_action, press_left_flipper, release_left_flipper, press_right_flipper,
+        release_right_flipper, press_plunger, release_plunger, press_left_table_bump,
+        release_left_table_bump, press_right_table_bump, release_right_table_bump,
+        press_bottom_table_bump, release_bottom_table_bump
+    ]
+    action_function = actions[action] if action < len(actions) else no_action
+    action_function()
+    print(f"Executed action: {action}")

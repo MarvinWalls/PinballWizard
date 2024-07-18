@@ -4,14 +4,13 @@ import numpy as np
 from game_control import GameControl
 from reward_system import RewardSystem
 
-
 class PinballEnv(gym.Env):
     """Custom Environment for Pinball Wizard that follows gym interface."""
     metadata = {'render.modes': ['human']}
 
     def __init__(self, window_title, templates_directory, screenshot_dir):
         super(PinballEnv, self).__init__()
-        self.action_space = spaces.Discrete(5)  # Adjust as necessary
+        self.action_space = spaces.Discrete(6)  # Adjust as necessary
         self.observation_space = spaces.Box(low=0, high=255, shape=(480, 640, 3), dtype=np.uint8)
 
         # Initialize GameControl with correct parameters
@@ -37,11 +36,9 @@ class PinballEnv(gym.Env):
         # Ensure the processed_frame has the correct shape with _preprocess_state.
         processed_frame = self._preprocess_state(processed_frame)
 
-        # Here you would extract the current score and ball count from the processed frame.
-        # Placeholder methods `extract_score` and `extract_ball_count` are assumed to be correctly defined in GameControl.
+        return processed_frame, reward, done, {}
 
-    def reset\
-                    (self):
+    def reset(self):
         """
         Resets the environment to an initial state and returns the initial observation.
         """

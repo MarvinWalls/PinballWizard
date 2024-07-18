@@ -13,7 +13,11 @@ BALL_COUNT_AREA = (579, 201, 30, 29)
 
 def read_text_from_area(img, coords):
     processed_img = preprocess_for_ocr(img, coords)
-    text = pytesseract.image_to_string(processed_img, config='--psm 7')
+    try:
+        text = pytesseract.image_to_string(processed_img, config='--psm 7', timeout=10)  # Set a timeout
+    except pytesseract.TesseractError as e:
+        print(f"Error reading text with Tesseract: {e}")
+        text = ""
     return text.strip()
 
 def parse_number_from_text(text):

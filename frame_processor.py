@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 import random
 import time
 from object_detection import detect_objects, load_templates, draw_detections
@@ -25,6 +26,8 @@ def process_frame(window_title, templates, reward_system, last_action, action_in
         score_text = read_text_from_area(preprocessed_screen, SCORE_AREA)
         ball_count_text = read_text_from_area(preprocessed_screen, BALL_COUNT_AREA)
 
+        print(f"Raw OCR score text: {score_text}, Raw OCR ball count text: {ball_count_text}")
+
         score = parse_number_from_text(score_text)
         ball_count = parse_number_from_text(ball_count_text)
 
@@ -33,11 +36,11 @@ def process_frame(window_title, templates, reward_system, last_action, action_in
 
         current_time = time.time()
         if current_time - last_action['time'] > action_interval:
-            action = random.choice(["press_left_flipper", "release_left_flipper", "press_right_flipper", "release_right_flipper", "press_plunger", "release_plunger"])
+            action = random.choice([0, 1, 2, 3, 4, 5, 6])
             last_action['action'] = action
             last_action['time'] = current_time
         else:
-            action = 'no_action'
+            action = 0  # No action
 
         perform_action(action)
 
@@ -50,9 +53,7 @@ def process_frame(window_title, templates, reward_system, last_action, action_in
 
         cv2.imshow('Detected Objects', image_with_detections)
         if cv2.waitKey(1) & 0xFF == ord('q'):
-            return False, last_action
+            return image_with_detections, last_action
     else:
         print("Screen capture failed.")
-    return True, last_action
-
-
+    return np.zeros((480, 640, 3), dtype=np.uint8), last_action
