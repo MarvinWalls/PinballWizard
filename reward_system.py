@@ -1,14 +1,14 @@
 class RewardSystem:
     def __init__(self):
-        self.previous_score = 0
-        self.previous_ball_count = 1
+        self.current_score = 0
+        self.current_ball_count = 1
         self.reset()
 
     def calculate_reward(self, current_score, current_ball_count):
         reward = 0
 
         # Check for ball loss
-        if current_ball_count > self.previous_ball_count:
+        if current_ball_count < self.previous_ball_count:
             reward -= 1000  # Penalty for losing a ball
             print(f"Ball lost. Current ball count: {current_ball_count}, Previous ball count: {self.previous_ball_count}")
 
@@ -32,4 +32,6 @@ class RewardSystem:
     def reset(self):
         self.previous_score = 0
         self.previous_ball_count = 1
+        self.current_score = 0
+        self.current_ball_count = 1
         print("RewardSystem reset.")

@@ -8,6 +8,7 @@ from reward_system import RewardSystem
 from object_detection import load_templates, detect_high_score
 from screen_capture import capture_screen
 
+
 class GameControl:
     def __init__(self, window_title, templates_directory, screenshot_dir):
         self.window_title = window_title
@@ -38,6 +39,11 @@ class GameControl:
             self.action_interval, self.screenshot_dir, self.DATA_FILE_PATH
         )
         logging.info(f"Processed frame type: {type(processed_frame)}")  # Debug statement
+
+        # Update reward system values
+        self.reward_system.current_score = self.get_current_score(processed_frame)
+        self.reward_system.current_ball_count = self.get_current_ball_count(processed_frame)
+
         reward, done = self.evaluate_game_state(processed_frame)
         logging.info(f"Action: {action}, Reward: {reward}, Done: {done}")
         return processed_frame, reward, done
@@ -58,3 +64,11 @@ class GameControl:
             logging.info("High score detected. Ending game.")
             return 0, True
         return 0, False
+
+    def get_current_score(self, frame):
+        # Extract the current score from the frame
+        return self.reward_system.previous_score  # Replace with actual score extraction logic
+
+    def get_current_ball_count(self, frame):
+        # Extract the current ball count from the frame
+        return self.reward_system.previous_ball_count  # Replace with actual ball count extraction logic

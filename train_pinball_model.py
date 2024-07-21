@@ -3,17 +3,50 @@ import logging
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv
 from stable_baselines3.common.callbacks import BaseCallback
+from torch.utils.tensorboard import SummaryWriter
 from game_control import GameControl
 
 class TensorboardCallback(BaseCallback):
-    def __init__(self, verbose=0):
+    def __init__(self, log_dir='./tensorboard_logs/', verbose=0):
         super(TensorboardCallback, self).__init__(verbose)
+        self.log_dir = log_dir
+        self.writer = SummaryWriter(log_dir)
+        self.step = 0
 
     def _on_step(self) -> bool:
+
         reward = self.locals['rewards'][0]
-        print(f"Reward in TensorboardCallback: {reward}")
-        self.logger.record('reward', reward)
+        obs = self.locals['new_obs'][0]
+        action = self.locals['actions'][0]
+        done = self.locals['dones'][0]
+
+        # Log reward
+        self.writer.add_scalar('Reward', reward, self.step)
+
+        # Log action
+        self.writer.add_scalar('Action', action, self.step)
+
+        # Log the image
+        image = self.locals['infos'][0].get('screenshot')
+        if image is not None:
+            self.writer.add_image('Game Screen', image, self.step, dataformats='HWC')
+
+        # Log the ball count and score
+        ball_count = self.locals['infos'][0].get('ball_count')
+        score = self.locals['infos'][0].get('score')
+        if ball_count is not None:
+            self.writer.add_scalar('Ball Count', ball_count, self.step)
+        if score is not None:
+            self.writer.add_scalar('Score', score, self.step)
+
+        # Log step
+        self.writer.add_scalar('Step', self.step, self.step)
+
+        self.step += 1
         return True
+
+    def _on_training_end(self) -> None:
+        self.writer.close()
 
 def create_env(window_title, templates_directory, screenshot_dir):
     from pinball_env import PinballEnv  # Import here to avoid circular dependency
@@ -22,7 +55,7 @@ def create_env(window_title, templates_directory, screenshot_dir):
 def train_policy(env, policy, total_timesteps=10000, tensorboard_log=None):
     model = PPO(policy, env, verbose=1, tensorboard_log=tensorboard_log)
     try:
-        model.learn(total_timesteps=total_timesteps)
+        model.learn(total_timesteps=total_timesteps, callback=TensorboardCallback())
     except KeyboardInterrupt:
         logging.warning("Training interrupted by user.")
         model.save("interrupted_model")
@@ -48,21 +81,16 @@ def train_model(window_title, templates_directory, screenshot_dir):
     env = create_env(window_title, templates_directory, screenshot_dir)
     game_control = GameControl(window_title, templates_directory, screenshot_dir)
 
-    model = train_policy(env, "MlpPolicy", total_timesteps=10000)
+    # Specify tensorboard_log directory
+    tensorboard_log = "./tensorboard_logs/"
+
+    model = train_policy(env, "MlpPolicy", total_timesteps=10000, tensorboard_log=tensorboard_log)
     save_model(model)
 
-    tensorboard_callback = TensorboardCallback()
-    model = train_policy(env, "CnnPolicy", total_timesteps=10000, tensorboard_log="./logs/")
-    try:
-        model.learn(total_timesteps=10000, callback=tensorboard_callback)
-    except KeyboardInterrupt:
-        logging.warning("Training interrupted by user.")
-        save_model(model, filename="interrupted_model")
-    finally:
-        save_model(model)
-        env.close()
+    model = train_policy(env, "CnnPolicy", total_timesteps=10000, tensorboard_log=tensorboard_log)
+    save_model(model, filename="pinball_model_final")
 
-    model = load_model()
+    model = load_model(filename="pinball_model_final")
     evaluate_model(model, env, game_control)
 
 if __name__ == "__main__":
