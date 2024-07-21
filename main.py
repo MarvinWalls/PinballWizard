@@ -10,3 +10,4 @@ if __name__ == "__main__":
 
     # Start training, now also passing the screenshot_dir
     train_model(window_title, templates_directory, screenshot_dir)
+

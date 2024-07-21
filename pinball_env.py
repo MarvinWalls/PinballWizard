@@ -24,16 +24,20 @@ class PinballEnv(gym.Env):
     def step(self, action):
         current_time = time.time()
         if current_time - self.last_snapshot_time >= self.snapshot_interval:
-            processed_frame, reward, done = self.game_control.perform_action(action)
+            processed_frame, reward, done, info = self.game_control.perform_action(action)
             ball_count = self.reward_system.previous_ball_count
             score = self.reward_system.previous_score
+            game_count = self.game_control.game_count
+            cumulative_reward = self.game_control.cumulative_reward
+
             logging.info(f"Reward calculated in GameControl: {reward}")
-            info = {
+            info.update({
                 'screenshot': processed_frame,
                 'ball_count': ball_count,
                 'score': score,
-                'reward': reward
-            }
+                'game_count': game_count,
+                'cumulative_reward': cumulative_reward
+            })
             self.last_snapshot_time = current_time
             return self._preprocess_state(processed_frame), reward, done, info
         else:

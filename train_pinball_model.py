@@ -11,8 +11,9 @@ def create_env(window_title, templates_directory, screenshot_dir):
 
 def train_policy(env, policy, total_timesteps=10000, tensorboard_log=None):
     model = PPO(policy, env, verbose=1, tensorboard_log=tensorboard_log)
+    callback = TensorboardCallback(tensorboard_log)
     try:
-        model.learn(total_timesteps=total_timesteps, callback=TensorboardCallback(tensorboard_log))
+        model.learn(total_timesteps=total_timesteps, callback=callback)
     except KeyboardInterrupt:
         logging.warning("Training interrupted by user.")
         model.save("interrupted_model")

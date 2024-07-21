@@ -22,6 +22,9 @@ class GameControl:
             raise FileNotFoundError("The high score template was not found.")
         self.action_interval = 0.5
         self.last_action = {'action': 'no_action', 'time': time.time()}
+        self.previous_ball_count = 3  # Assuming game starts with 3 balls
+        self.cumulative_reward = 0
+        self.game_count = 1
         logging.info('GameControl initialized')
 
     def perform_action(self, action):
@@ -45,11 +48,27 @@ class GameControl:
 
         # Calculate the reward using the reward system
         reward = self.reward_system.calculate_reward(current_score, current_ball_count)
-        logging.info(f"Calculated reward in GameControl: {reward}")
+
+        # Check if game is reset
+        if current_ball_count == 0 and self.previous_ball_count > 0:
+            self.cumulative_reward = 0
+            self.game_count += 1
+            logging.info(f"New game detected, resetting cumulative reward. Game count: {self.game_count}")
+            self.reset_game()
+
+        self.previous_ball_count = current_ball_count
+
+        # Update cumulative reward
+        self.cumulative_reward += reward
 
         done = self.evaluate_game_state(processed_frame)
-        logging.info(f"Action: {action}, Reward: {reward}, Done: {done}")
-        return processed_frame, reward, done
+        logging.info(f"Action: {action}, Reward: {reward}, Cumulative Reward: {self.cumulative_reward}, Done: {done}")
+        return processed_frame, reward, done, {
+            'ball_count': current_ball_count,
+            'score': current_score,
+            'game_count': self.game_count,
+            'cumulative_reward': self.cumulative_reward
+        }
 
     def reset_game(self):
         logging.info("Resetting game...")

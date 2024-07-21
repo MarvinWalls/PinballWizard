@@ -1,6 +1,8 @@
+import os
 import logging
 from stable_baselines3.common.callbacks import BaseCallback
 from torch.utils.tensorboard import SummaryWriter
+import time
 
 class TensorboardCallback(BaseCallback):
     def __init__(self, log_dir='./tensorboard_logs/', verbose=0):
@@ -8,35 +10,27 @@ class TensorboardCallback(BaseCallback):
         self.log_dir = log_dir
         self.writer = SummaryWriter(log_dir)
         self.step = 0
-        self.previous_score = 0
-        self.previous_ball_count = 3
         self.cumulative_reward = 0
+        self.start_time = time.time()
 
     def _on_step(self) -> bool:
+        reward = self.locals['rewards'][0]
+        obs = self.locals['new_obs'][0]
         action = self.locals['actions'][0]
+        done = self.locals['dones'][0]
         info = self.locals['infos'][0]
 
-        # Get current score and ball count
-        current_score = info.get('score', self.previous_score)
-        current_ball_count = info.get('ball_count', self.previous_ball_count)
-
-        # Calculate step reward based on score and ball count changes
-        step_reward = (current_score - self.previous_score) - (self.previous_ball_count - current_ball_count) * 1000
-
         # Update cumulative reward
-        self.cumulative_reward += step_reward
+        self.cumulative_reward += reward
 
-        # Update previous score and ball count
-        self.previous_score = current_score
-        self.previous_ball_count = current_ball_count
+        # Calculate elapsed time
+        elapsed_time = time.time() - self.start_time
 
-        # Log step reward
-        self.writer.add_scalar('Step Reward', step_reward, self.step)
-        logging.info(f"Logged step reward: {step_reward} at step: {self.step}")
-
-        # Log cumulative reward
+        # Log individual reward, cumulative reward, and elapsed time
+        self.writer.add_scalar('Reward', reward, self.step)
         self.writer.add_scalar('Cumulative Reward', self.cumulative_reward, self.step)
-        logging.info(f"Logged cumulative reward: {self.cumulative_reward} at step: {self.step}")
+        self.writer.add_scalar('Elapsed Time', elapsed_time, self.step)
+        logging.info(f"Logged reward: {reward}, cumulative reward: {self.cumulative_reward}, elapsed time: {elapsed_time} at step: {self.step}")
 
         # Log action
         self.writer.add_scalar('Action', action, self.step)
@@ -48,13 +42,24 @@ class TensorboardCallback(BaseCallback):
             self.writer.add_image('Game Screen', image, self.step, dataformats='HWC')
             logging.info(f"Logged image at step: {self.step}")
 
-        # Log the ball count and score
-        if current_ball_count is not None:
-            self.writer.add_scalar('Ball Count', current_ball_count, self.step)
-            logging.info(f"Logged ball count: {current_ball_count} at step: {self.step}")
-        if current_score is not None:
-            self.writer.add_scalar('Score', current_score, self.step)
-            logging.info(f"Logged score: {current_score} at step: {self.step}")
+        # Log the ball count, score, game count, and timestamp
+        ball_count = info.get('ball_count')
+        score = info.get('score')
+        game_count = info.get('game_count')
+        timestamp = time.time()
+
+        if ball_count is not None:
+            self.writer.add_scalar('Ball Count', ball_count, self.step)
+            logging.info(f"Logged ball count: {ball_count} at step: {self.step}")
+        if score is not None:
+            self.writer.add_scalar('Score', score, self.step)
+            logging.info(f"Logged score: {score} at step: {self.step}")
+        if game_count is not None:
+            self.writer.add_scalar('Game Count', game_count, self.step)
+            logging.info(f"Logged game count: {game_count} at step: {self.step}")
+        if timestamp is not None:
+            self.writer.add_scalar('Timestamp', timestamp, self.step)
+            logging.info(f"Logged timestamp: {timestamp} at step: {self.step}")
 
         self.step += 1
         return True
