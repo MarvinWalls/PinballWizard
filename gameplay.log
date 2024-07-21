@@ -1,0 +1,355 @@
+2024-07-21 09:08:28,718:INFO:Logging setup complete
+2024-07-21 09:08:28,741:INFO:GameControl initialized
+2024-07-21 09:08:28,761:INFO:GameControl initialized
+2024-07-21 09:08:35,845:INFO:Resetting game...
+2024-07-21 09:08:38,604:INFO:Performing action: 0
+2024-07-21 09:08:39,304:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:39,314:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:08:39,373:INFO:Performing action: 1
+2024-07-21 09:08:40,123:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:40,133:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:08:40,184:INFO:Performing action: 1
+2024-07-21 09:08:40,880:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:40,893:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:08:40,940:INFO:Performing action: 3
+2024-07-21 09:08:41,636:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:41,644:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:08:41,702:INFO:Performing action: 3
+2024-07-21 09:08:42,375:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:42,383:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:08:42,439:INFO:Performing action: 1
+2024-07-21 09:08:43,124:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:43,131:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:08:43,181:INFO:Performing action: 0
+2024-07-21 09:08:43,804:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:43,809:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:08:43,858:INFO:Performing action: 3
+2024-07-21 09:08:44,550:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:44,558:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:08:44,607:INFO:Performing action: 2
+2024-07-21 09:08:45,282:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:45,290:INFO:Action: 2, Reward: 0, Done: False
+2024-07-21 09:08:45,340:INFO:Performing action: 0
+2024-07-21 09:08:45,938:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:45,947:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:08:46,014:INFO:Performing action: 4
+2024-07-21 09:08:46,965:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:46,972:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:08:47,016:INFO:Performing action: 2
+2024-07-21 09:08:47,680:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:47,689:INFO:Action: 2, Reward: 0, Done: False
+2024-07-21 09:08:47,740:INFO:Performing action: 0
+2024-07-21 09:08:48,332:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:48,339:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:08:48,397:INFO:Performing action: 0
+2024-07-21 09:08:49,020:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:49,032:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:08:49,092:INFO:Performing action: 1
+2024-07-21 09:08:50,111:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:50,122:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:08:50,168:INFO:Performing action: 5
+2024-07-21 09:08:50,882:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:50,894:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:08:50,954:INFO:Performing action: 2
+2024-07-21 09:08:51,689:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:51,698:INFO:Action: 2, Reward: 0, Done: False
+2024-07-21 09:08:51,747:INFO:Performing action: 3
+2024-07-21 09:08:52,532:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:52,542:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:08:52,598:INFO:Performing action: 1
+2024-07-21 09:08:53,371:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:53,380:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:08:53,436:INFO:Performing action: 1
+2024-07-21 09:08:54,116:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:54,124:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:08:54,171:INFO:Performing action: 5
+2024-07-21 09:08:54,846:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:54,853:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:08:54,905:INFO:Performing action: 4
+2024-07-21 09:08:55,840:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:55,858:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:08:55,906:INFO:Performing action: 0
+2024-07-21 09:08:56,549:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:56,557:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:08:56,610:INFO:Performing action: 1
+2024-07-21 09:08:57,184:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:57,190:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:08:57,230:INFO:Performing action: 1
+2024-07-21 09:08:57,916:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:57,924:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:08:57,980:INFO:Performing action: 5
+2024-07-21 09:08:58,910:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:58,925:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:08:58,967:INFO:Performing action: 3
+2024-07-21 09:08:59,539:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:08:59,546:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:08:59,584:INFO:Performing action: 1
+2024-07-21 09:09:00,288:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:00,295:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:00,345:INFO:Performing action: 1
+2024-07-21 09:09:01,049:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:01,064:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:01,119:INFO:Performing action: 1
+2024-07-21 09:09:02,049:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:02,057:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:02,099:INFO:Performing action: 3
+2024-07-21 09:09:02,798:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:02,804:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:02,858:INFO:Performing action: 4
+2024-07-21 09:09:03,542:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:03,552:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:09:03,600:INFO:Performing action: 5
+2024-07-21 09:09:04,310:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:04,327:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:04,390:INFO:Performing action: 0
+2024-07-21 09:09:05,206:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:05,215:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:09:05,264:INFO:Performing action: 5
+2024-07-21 09:09:05,957:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:05,964:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:06,019:INFO:Performing action: 1
+2024-07-21 09:09:06,728:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:06,734:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:06,777:INFO:Performing action: 0
+2024-07-21 09:09:07,384:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:07,392:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:09:07,442:INFO:Performing action: 2
+2024-07-21 09:09:08,113:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:08,124:INFO:Action: 2, Reward: 0, Done: False
+2024-07-21 09:09:08,180:INFO:Performing action: 1
+2024-07-21 09:09:08,936:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:08,946:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:08,992:INFO:Performing action: 3
+2024-07-21 09:09:09,716:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:09,723:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:09,770:INFO:Performing action: 4
+2024-07-21 09:09:10,603:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:10,617:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:09:10,687:INFO:Performing action: 1
+2024-07-21 09:09:11,549:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:11,557:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:11,603:INFO:Performing action: 2
+2024-07-21 09:09:12,295:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:12,301:INFO:Action: 2, Reward: 0, Done: False
+2024-07-21 09:09:12,357:INFO:Performing action: 1
+2024-07-21 09:09:13,060:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:13,070:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:13,125:INFO:Performing action: 3
+2024-07-21 09:09:14,025:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:14,039:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:14,091:INFO:Performing action: 3
+2024-07-21 09:09:14,770:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:14,782:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:14,830:INFO:Performing action: 1
+2024-07-21 09:09:15,526:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:15,533:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:15,590:INFO:Performing action: 5
+2024-07-21 09:09:16,307:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:16,326:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:16,384:INFO:Performing action: 4
+2024-07-21 09:09:17,264:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:17,271:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:09:17,322:INFO:Performing action: 1
+2024-07-21 09:09:18,013:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:18,018:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:18,071:INFO:Performing action: 4
+2024-07-21 09:09:18,744:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:18,750:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:09:18,805:INFO:Performing action: 0
+2024-07-21 09:09:19,414:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:19,422:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:09:19,471:INFO:Performing action: 0
+2024-07-21 09:09:20,084:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:20,092:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:09:20,137:INFO:Performing action: 5
+2024-07-21 09:09:20,831:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:20,840:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:20,901:INFO:Performing action: 1
+2024-07-21 09:09:21,473:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:21,480:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:21,521:INFO:Performing action: 2
+2024-07-21 09:09:22,246:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:22,254:INFO:Action: 2, Reward: 0, Done: False
+2024-07-21 09:09:22,296:INFO:Performing action: 1
+2024-07-21 09:09:23,224:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:23,230:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:23,268:INFO:Performing action: 5
+2024-07-21 09:09:23,951:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:23,959:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:24,019:INFO:Performing action: 3
+2024-07-21 09:09:24,686:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:24,694:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:24,750:INFO:Performing action: 5
+2024-07-21 09:09:25,453:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:25,460:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:25,516:INFO:Performing action: 4
+2024-07-21 09:09:26,230:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:26,238:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:09:26,291:INFO:Performing action: 4
+2024-07-21 09:09:26,995:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:27,002:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:09:27,058:INFO:Performing action: 3
+2024-07-21 09:09:27,616:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:27,622:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:27,663:INFO:Performing action: 4
+2024-07-21 09:09:28,264:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:28,271:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:09:28,311:INFO:Performing action: 1
+2024-07-21 09:09:29,213:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:29,220:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:29,262:INFO:Performing action: 2
+2024-07-21 09:09:29,945:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:29,953:INFO:Action: 2, Reward: 0, Done: False
+2024-07-21 09:09:30,001:INFO:Performing action: 3
+2024-07-21 09:09:30,672:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:30,681:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:30,736:INFO:Performing action: 3
+2024-07-21 09:09:31,433:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:31,444:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:31,496:INFO:Performing action: 4
+2024-07-21 09:09:32,220:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:32,228:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:09:32,284:INFO:Performing action: 4
+2024-07-21 09:09:32,967:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:32,978:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:09:33,025:INFO:Performing action: 3
+2024-07-21 09:09:33,713:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:33,723:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:33,776:INFO:Performing action: 0
+2024-07-21 09:09:34,313:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:34,320:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:09:34,375:INFO:Performing action: 4
+2024-07-21 09:09:35,281:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:35,289:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:09:35,332:INFO:Performing action: 0
+2024-07-21 09:09:35,950:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:35,959:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:09:36,016:INFO:Performing action: 1
+2024-07-21 09:09:36,583:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:36,589:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:36,629:INFO:Performing action: 2
+2024-07-21 09:09:37,350:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:37,361:INFO:Action: 2, Reward: 0, Done: False
+2024-07-21 09:09:37,422:INFO:Performing action: 5
+2024-07-21 09:09:38,297:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:38,306:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:38,354:INFO:Performing action: 5
+2024-07-21 09:09:39,040:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:39,046:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:39,094:INFO:Performing action: 0
+2024-07-21 09:09:39,695:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:39,705:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:09:39,753:INFO:Performing action: 1
+2024-07-21 09:09:40,446:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:40,452:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:40,508:INFO:Performing action: 0
+2024-07-21 09:09:41,129:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:41,138:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:09:41,188:INFO:Performing action: 4
+2024-07-21 09:09:41,781:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:41,789:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:09:41,830:INFO:Performing action: 3
+2024-07-21 09:09:42,515:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:42,524:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:42,578:INFO:Performing action: 3
+2024-07-21 09:09:43,195:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:43,204:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:43,256:INFO:Performing action: 2
+2024-07-21 09:09:44,174:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:44,185:INFO:Action: 2, Reward: 0, Done: False
+2024-07-21 09:09:44,230:INFO:Performing action: 5
+2024-07-21 09:09:44,933:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:44,944:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:44,991:INFO:Performing action: 3
+2024-07-21 09:09:45,679:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:45,688:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:45,749:INFO:Performing action: 3
+2024-07-21 09:09:46,467:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:46,486:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:46,561:INFO:Performing action: 5
+2024-07-21 09:09:47,383:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:47,391:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:47,450:INFO:Performing action: 0
+2024-07-21 09:09:47,958:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:47,966:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:09:48,009:INFO:Performing action: 1
+2024-07-21 09:09:48,703:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:48,710:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:48,762:INFO:Performing action: 1
+2024-07-21 09:09:49,481:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:49,495:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:49,581:INFO:Performing action: 0
+2024-07-21 09:09:50,335:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:50,344:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:09:50,392:INFO:Performing action: 5
+2024-07-21 09:09:51,095:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:51,107:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:51,154:INFO:Performing action: 3
+2024-07-21 09:09:51,734:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:51,742:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:51,783:INFO:Performing action: 5
+2024-07-21 09:09:52,518:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:52,534:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:52,605:INFO:Performing action: 1
+2024-07-21 09:09:53,414:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:53,420:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:53,481:INFO:Performing action: 0
+2024-07-21 09:09:54,085:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:54,091:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:09:54,146:INFO:Performing action: 1
+2024-07-21 09:09:54,846:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:54,853:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:54,902:INFO:Performing action: 2
+2024-07-21 09:09:55,701:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:55,714:INFO:Action: 2, Reward: 0, Done: False
+2024-07-21 09:09:55,771:INFO:Performing action: 3
+2024-07-21 09:09:56,537:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:56,545:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:56,593:INFO:Performing action: 5
+2024-07-21 09:09:57,313:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:57,319:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:57,376:INFO:Performing action: 1
+2024-07-21 09:09:58,059:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:58,074:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:09:58,132:INFO:Performing action: 5
+2024-07-21 09:09:59,071:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:59,077:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:09:59,119:INFO:Performing action: 3
+2024-07-21 09:09:59,812:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:09:59,818:INFO:Action: 3, Reward: 0, Done: False
+2024-07-21 09:09:59,873:INFO:Performing action: 5
+2024-07-21 09:10:00,549:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:10:00,556:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:10:00,617:INFO:Performing action: 5
+2024-07-21 09:10:01,338:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:10:01,346:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:10:01,391:INFO:Performing action: 4
+2024-07-21 09:10:02,282:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:10:02,290:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:10:02,341:INFO:Performing action: 1
+2024-07-21 09:10:03,109:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:10:03,116:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:10:03,161:INFO:Performing action: 1
+2024-07-21 09:10:03,844:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:10:03,852:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:10:03,901:INFO:Performing action: 5
+2024-07-21 09:10:04,581:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:10:04,590:INFO:Action: 5, Reward: 0, Done: False
+2024-07-21 09:10:04,647:INFO:Performing action: 4
+2024-07-21 09:10:05,324:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:10:05,337:INFO:Action: 4, Reward: 0, Done: False
+2024-07-21 09:10:05,396:INFO:Performing action: 1
+2024-07-21 09:10:05,992:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:10:06,001:INFO:Action: 1, Reward: 0, Done: False
+2024-07-21 09:10:06,047:INFO:Performing action: 2
+2024-07-21 09:10:06,737:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:10:06,743:INFO:Action: 2, Reward: 0, Done: False
+2024-07-21 09:10:06,794:INFO:Performing action: 0
+2024-07-21 09:10:07,432:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:10:07,445:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:10:07,514:INFO:Performing action: 0
+2024-07-21 09:10:08,360:INFO:Processed frame type: <class 'numpy.ndarray'>
+2024-07-21 09:10:08,370:INFO:Action: 0, Reward: 0, Done: False
+2024-07-21 09:10:08,414:INFO:Performing action: 5
+2024-07-21 09:10:09,050:WARNING:Training interrupted by user.
+2024-07-21 09:10:11,704:INFO:Model saved as pinball_model
