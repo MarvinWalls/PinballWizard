@@ -45,6 +45,7 @@ class GameControl:
 
         # Calculate the reward using the reward system
         reward = self.reward_system.calculate_reward(current_score, current_ball_count)
+        logging.info(f"Calculated reward in GameControl: {reward}")
 
         done = self.evaluate_game_state(processed_frame)
         logging.info(f"Action: {action}, Reward: {reward}, Done: {done}")
