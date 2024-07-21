@@ -1,6 +1,7 @@
 import gym
 from gym import spaces
 import numpy as np
+import logging
 from game_control import GameControl
 from reward_system import RewardSystem
 
@@ -19,9 +20,17 @@ class PinballEnv(gym.Env):
 
     def step(self, action):
         processed_frame, reward, done = self.game_control.perform_action(action)
+        ball_count = self.reward_system.previous_ball_count
+        score = self.reward_system.previous_score
+
+        # Log the calculated reward
+        logging.info(f"Reward calculated in PinballEnv: {reward}")
+
         info = {
-            'ball_count': self.reward_system.current_ball_count,
-            'score': self.reward_system.current_score
+            'screenshot': processed_frame,
+            'ball_count': ball_count,
+            'score': score,
+            'reward': reward
         }
         return self._preprocess_state(processed_frame), reward, done, info
 

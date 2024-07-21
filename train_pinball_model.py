@@ -3,8 +3,10 @@ import logging
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv
 from stable_baselines3.common.callbacks import BaseCallback
-from torch.utils.tensorboard import SummaryWriter
 from game_control import GameControl
+import cv2
+import numpy as np
+from torch.utils.tensorboard import SummaryWriter
 
 class TensorboardCallback(BaseCallback):
     def __init__(self, log_dir='./tensorboard_logs/', verbose=0):
@@ -14,7 +16,6 @@ class TensorboardCallback(BaseCallback):
         self.step = 0
 
     def _on_step(self) -> bool:
-
         reward = self.locals['rewards'][0]
         obs = self.locals['new_obs'][0]
         action = self.locals['actions'][0]
@@ -39,9 +40,6 @@ class TensorboardCallback(BaseCallback):
         if score is not None:
             self.writer.add_scalar('Score', score, self.step)
 
-        # Log step
-        self.writer.add_scalar('Step', self.step, self.step)
-
         self.step += 1
         return True
 
@@ -49,13 +47,13 @@ class TensorboardCallback(BaseCallback):
         self.writer.close()
 
 def create_env(window_title, templates_directory, screenshot_dir):
-    from pinball_env import PinballEnv  # Import here to avoid circular dependency
+    from pinball_env import PinballEnv
     return DummyVecEnv([lambda: PinballEnv(window_title, templates_directory, screenshot_dir)])
 
 def train_policy(env, policy, total_timesteps=10000, tensorboard_log=None):
     model = PPO(policy, env, verbose=1, tensorboard_log=tensorboard_log)
     try:
-        model.learn(total_timesteps=total_timesteps, callback=TensorboardCallback())
+        model.learn(total_timesteps=total_timesteps, callback=TensorboardCallback(tensorboard_log))
     except KeyboardInterrupt:
         logging.warning("Training interrupted by user.")
         model.save("interrupted_model")
@@ -81,8 +79,9 @@ def train_model(window_title, templates_directory, screenshot_dir):
     env = create_env(window_title, templates_directory, screenshot_dir)
     game_control = GameControl(window_title, templates_directory, screenshot_dir)
 
-    # Specify tensorboard_log directory
-    tensorboard_log = "./tensorboard_logs/"
+    # Ensure each training run has a unique tensorboard log directory
+    run_id = len(os.listdir('./tensorboard_logs/')) + 1
+    tensorboard_log = f"./tensorboard_logs/PPO_{run_id}"
 
     model = train_policy(env, "MlpPolicy", total_timesteps=10000, tensorboard_log=tensorboard_log)
     save_model(model)
@@ -102,3 +101,4 @@ if __name__ == "__main__":
 
     # Start training, now also passing the screenshot_dir
     train_model(window_title, templates_directory, screenshot_dir)
+d
