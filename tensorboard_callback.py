@@ -3,6 +3,7 @@ import logging
 from stable_baselines3.common.callbacks import BaseCallback
 from torch.utils.tensorboard import SummaryWriter
 import time
+import tensorflow as tf
 
 class TensorboardCallback(BaseCallback):
     def __init__(self, log_dir='./tensorboard_logs/', verbose=0):
@@ -12,13 +13,26 @@ class TensorboardCallback(BaseCallback):
         self.step = 0
         self.cumulative_reward = 0
         self.start_time = time.time()
+        self.previous_score = 0
+        self.previous_ball_count = 1
 
     def _on_step(self) -> bool:
-        reward = self.locals['rewards'][0]
         obs = self.locals['new_obs'][0]
         action = self.locals['actions'][0]
         done = self.locals['dones'][0]
         info = self.locals['infos'][0]
+
+        # Extract the current score and ball count from info
+        current_score = info.get('score', 0)
+        current_ball_count = info.get('ball_count', 1)
+        game_count = info.get('game_count', 1)
+
+        # Calculate reward based on changes in score and ball count
+        reward = 0
+        if current_ball_count < self.previous_ball_count:
+            reward -= 100000  # Penalty for losing a ball
+        if current_score > self.previous_score:
+            reward += current_score - self.previous_score
 
         # Update cumulative reward
         self.cumulative_reward += reward
@@ -39,27 +53,27 @@ class TensorboardCallback(BaseCallback):
         # Log the image
         image = info.get('screenshot')
         if image is not None:
-            self.writer.add_image('Game Screen', image, self.step, dataformats='HWC')
+            if isinstance(image, tf.Tensor):
+                image_np = image.numpy()  # Convert TensorFlow tensor to NumPy array
+            else:
+                image_np = image  # It's already a NumPy array
+            self.writer.add_image('Game Screen', image_np, self.step, dataformats='HWC')
             logging.info(f"Logged image at step: {self.step}")
 
-        # Log the ball count, score, game count, and timestamp
-        ball_count = info.get('ball_count')
-        score = info.get('score')
-        game_count = info.get('game_count')
-        timestamp = time.time()
-
-        if ball_count is not None:
-            self.writer.add_scalar('Ball Count', ball_count, self.step)
-            logging.info(f"Logged ball count: {ball_count} at step: {self.step}")
-        if score is not None:
-            self.writer.add_scalar('Score', score, self.step)
-            logging.info(f"Logged score: {score} at step: {self.step}")
+        # Log the ball count, score, and game count
+        if current_ball_count is not None:
+            self.writer.add_scalar('Ball Count', current_ball_count, self.step)
+            logging.info(f"Logged ball count: {current_ball_count} at step: {self.step}")
+        if current_score is not None:
+            self.writer.add_scalar('Score', current_score, self.step)
+            logging.info(f"Logged score: {current_score} at step: {self.step}")
         if game_count is not None:
             self.writer.add_scalar('Game Count', game_count, self.step)
             logging.info(f"Logged game count: {game_count} at step: {self.step}")
-        if timestamp is not None:
-            self.writer.add_scalar('Timestamp', timestamp, self.step)
-            logging.info(f"Logged timestamp: {timestamp} at step: {self.step}")
+
+        # Update previous score and ball count for the next step
+        self.previous_score = current_score
+        self.previous_ball_count = current_ball_count
 
         self.step += 1
         return True

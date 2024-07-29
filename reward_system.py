@@ -11,7 +11,7 @@ class RewardSystem:
 
         # Check for ball loss
         if current_ball_count > self.previous_ball_count:
-            reward -= 1000  # Penalty for losing a ball
+            reward -= 100000  # Penalty for losing a ball
             print(f"Ball lost. Current ball count: {current_ball_count}, Previous ball count: {self.previous_ball_count}")
             logging.info(f"Ball lost. Current ball count: {current_ball_count}, Previous ball count: {self.previous_ball_count}")
 

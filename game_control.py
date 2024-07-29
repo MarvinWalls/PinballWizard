@@ -2,11 +2,15 @@ import cv2
 import numpy as np
 import time
 import logging
+import win32gui
+from mss import mss
 from frame_processor import process_frame
 from keyboard_actions import perform_action, press_enter, press_f2
 from reward_system import RewardSystem
 from object_detection import load_templates, detect_high_score
 from screen_capture import capture_screen
+import tensorflow as tf
+from datetime import datetime
 
 class GameControl:
     def __init__(self, window_title, templates_directory, screenshot_dir):
@@ -20,9 +24,11 @@ class GameControl:
                                               cv2.IMREAD_GRAYSCALE)
         if self.high_score_template is None:
             raise FileNotFoundError("The high score template was not found.")
-        self.action_interval = 0.5
-        self.last_action = {'action': 'no_action', 'time': time.time()}
-        self.previous_ball_count = 3  # Assuming game starts with 3 balls
+
+        self.action_interval = 0.05  # Minimum time interval between actions
+        self.last_action = {'action': 'no_action', 'time': time.time()}  # Tracks the last action and time
+
+        self.previous_ball_count = 1  # Assuming game starts with 1 ball
         self.cumulative_reward = 0
         self.game_count = 1
         logging.info('GameControl initialized')
@@ -31,7 +37,7 @@ class GameControl:
         logging.info(f"Performing action: {action}")
         perform_action(action)
 
-        current_frame, timestamp = capture_screen(self.window_title, self.screenshot_dir)
+        current_frame, timestamp = self.capture_screen()
         if current_frame is None:
             logging.warning("Failed to capture the screen. Using a default blank frame.")
             current_frame = np.zeros((480, 640, 3), dtype=np.uint8)  # Use a blank frame if capture fails.
@@ -64,6 +70,7 @@ class GameControl:
         done = self.evaluate_game_state(processed_frame)
         logging.info(f"Action: {action}, Reward: {reward}, Cumulative Reward: {self.cumulative_reward}, Done: {done}")
         return processed_frame, reward, done, {
+            'processed_frame': processed_frame,
             'ball_count': current_ball_count,
             'score': current_score,
             'game_count': self.game_count,
@@ -77,7 +84,7 @@ class GameControl:
         press_enter()
         time.sleep(1)
 
-        initial_state, _ = capture_screen(self.window_title, self.screenshot_dir)
+        initial_state, _ = self.capture_screen()
         return initial_state
 
     def evaluate_game_state(self, processed_frame):
@@ -94,3 +101,31 @@ class GameControl:
     def get_current_ball_count(self, frame):
         # Placeholder for actual ball count extraction logic
         return self.reward_system.previous_ball_count
+
+    def capture_screen(self):
+        window_handle = win32gui.FindWindow(None, self.window_title)
+        if not window_handle:
+            print(f"Window with title '{self.window_title}' not found.")
+            return None, None
+
+        x1, y1, x2, y2 = win32gui.GetWindowRect(window_handle)
+
+        with mss() as sct:
+            monitor = {"top": y1, "left": x1, "width": x2 - x1, "height": y2 - y1}
+            screen = sct.grab(monitor)
+            screen_np = np.array(screen)[:, :, :3]  # Discard the alpha channel if present
+            screen_tensor = tf.convert_to_tensor(screen_np, dtype=tf.float32)
+            resized_screen_tensor = tf.image.resize(screen_tensor, [480, 640])
+            resized_screen_np = resized_screen_tensor.numpy().astype(np.uint8)
+
+            timestamp = datetime.now().strftime("%Y%m%d-%H%M%S%f")
+            filename = f"pinball_screenshot_{timestamp}.png"
+            save_path = tf.io.gfile.join(self.screenshot_dir, filename)
+
+            if not tf.io.gfile.exists(self.screenshot_dir):
+                tf.io.gfile.makedirs(self.screenshot_dir)
+
+            encoded_png = tf.io.encode_png(resized_screen_np)
+            tf.io.write_file(save_path, encoded_png)
+
+            return resized_screen_np, timestamp
