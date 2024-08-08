@@ -7,10 +7,9 @@ from mss import mss
 from frame_processor import process_frame
 from keyboard_actions import perform_action, press_enter, press_f2
 from reward_system import RewardSystem
-from object_detection import load_templates, detect_high_score
-from screen_capture import capture_screen
 import tensorflow as tf
 from datetime import datetime
+import os
 
 class GameControl:
     def __init__(self, window_title, templates_directory, screenshot_dir):
@@ -18,14 +17,8 @@ class GameControl:
         self.templates_directory = templates_directory
         self.screenshot_dir = screenshot_dir
         self.DATA_FILE_PATH = r"C:\Users\marvi\Pinball Wizard\GameplayData\data.json"
-        self.templates = load_templates(self.templates_directory)
         self.reward_system = RewardSystem()
-        self.high_score_template = cv2.imread(f"{self.templates_directory}/high_score_template.png",
-                                              cv2.IMREAD_GRAYSCALE)
-        if self.high_score_template is None:
-            raise FileNotFoundError("The high score template was not found.")
-
-        self.action_interval = 0.05  # Minimum time interval between actions
+        self.action_interval = 0.025  # Minimum time interval between actions
         self.last_action = {'action': 'no_action', 'time': time.time()}  # Tracks the last action and time
 
         self.previous_ball_count = 1  # Assuming game starts with 1 ball
@@ -34,19 +27,19 @@ class GameControl:
         logging.info('GameControl initialized')
 
     def perform_action(self, action):
-        logging.info(f"Performing action: {action}")
         perform_action(action)
 
         current_frame, timestamp = self.capture_screen()
         if current_frame is None:
-            logging.warning("Failed to capture the screen. Using a default blank frame.")
-            current_frame = np.zeros((480, 640, 3), dtype=np.uint8)  # Use a blank frame if capture fails.
+            current_frame = np.zeros((240, 320, 3), dtype=np.uint8)  # Use a blank frame if capture fails.
 
         processed_frame, self.last_action = process_frame(
-            self.window_title, self.templates, self.reward_system, self.last_action,
-            self.action_interval, self.screenshot_dir, self.DATA_FILE_PATH
+            current_frame, self.window_title, self.reward_system, self.last_action,
+            self.action_interval, self.screenshot_dir, self.DATA_FILE_PATH, timestamp
         )
-        logging.info(f"Processed frame type: {type(processed_frame)}")  # Debug statement
+
+        # Ensure the processed frame has the correct shape
+        processed_frame = self.ensure_correct_shape(processed_frame)
 
         # Extract current score and ball count
         current_score = self.get_current_score(processed_frame)
@@ -59,7 +52,6 @@ class GameControl:
         if current_ball_count == 0 and self.previous_ball_count > 0:
             self.cumulative_reward = 0
             self.game_count += 1
-            logging.info(f"New game detected, resetting cumulative reward. Game count: {self.game_count}")
             self.reset_game()
 
         self.previous_ball_count = current_ball_count
@@ -68,7 +60,7 @@ class GameControl:
         self.cumulative_reward += reward
 
         done = self.evaluate_game_state(processed_frame)
-        logging.info(f"Action: {action}, Reward: {reward}, Cumulative Reward: {self.cumulative_reward}, Done: {done}")
+
         return processed_frame, reward, done, {
             'processed_frame': processed_frame,
             'ball_count': current_ball_count,
@@ -78,7 +70,6 @@ class GameControl:
         }
 
     def reset_game(self):
-        logging.info("Resetting game...")
         press_f2()
         time.sleep(1)
         press_enter()
@@ -88,10 +79,7 @@ class GameControl:
         return initial_state
 
     def evaluate_game_state(self, processed_frame):
-        detected = detect_high_score(processed_frame, self.high_score_template, threshold=0.9)
-        if detected:
-            logging.info("High score detected. Ending game.")
-            return True
+        # This can be updated based on your specific game over conditions.
         return False
 
     def get_current_score(self, frame):
@@ -115,17 +103,16 @@ class GameControl:
             screen = sct.grab(monitor)
             screen_np = np.array(screen)[:, :, :3]  # Discard the alpha channel if present
             screen_tensor = tf.convert_to_tensor(screen_np, dtype=tf.float32)
-            resized_screen_tensor = tf.image.resize(screen_tensor, [480, 640])
+            resized_screen_tensor = tf.image.resize(screen_tensor, [240, 320])
             resized_screen_np = resized_screen_tensor.numpy().astype(np.uint8)
 
             timestamp = datetime.now().strftime("%Y%m%d-%H%M%S%f")
-            filename = f"pinball_screenshot_{timestamp}.png"
-            save_path = tf.io.gfile.join(self.screenshot_dir, filename)
-
-            if not tf.io.gfile.exists(self.screenshot_dir):
-                tf.io.gfile.makedirs(self.screenshot_dir)
-
-            encoded_png = tf.io.encode_png(resized_screen_np)
-            tf.io.write_file(save_path, encoded_png)
 
             return resized_screen_np, timestamp
+
+    def ensure_correct_shape(self, frame):
+        # Ensure the frame has the correct shape for the model
+        if frame.shape != (240, 320, 3):
+            frame = np.stack([frame] * 3, axis=-1) if len(frame.shape) == 2 else frame
+            frame = cv2.resize(frame, (320, 240))
+        return frame

@@ -1,0 +1,291 @@
+2024-08-07 18:04:52,504:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 18:04:52,514:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 18:07:42,571:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 18:07:42,573:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 18:07:42,787:INFO:Deleted final_model.zip
+2024-08-07 18:07:42,812:INFO:Deleted interrupted_model.zip
+2024-08-07 18:08:59,863:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 18:08:59,863:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 18:19:05,851:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 18:19:05,856:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 18:19:06,648:INFO:Deleted final_model.zip
+2024-08-07 18:19:06,678:INFO:Deleted interrupted_model.zip
+2024-08-07 18:29:33,442:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 18:29:33,446:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 18:29:34,725:INFO:Deleted final_model.zip
+2024-08-07 18:29:34,727:INFO:Deleted interrupted_model.zip
+2024-08-07 18:30:06,591:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 18:30:06,591:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 22:32:05,119:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 22:32:05,122:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 22:32:30,247:INFO:Deleted final_model.zip
+2024-08-07 22:32:30,248:INFO:Deleted interrupted_model.zip
+2024-08-07 22:38:54,027:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 22:38:54,028:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 22:39:41,769:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 22:39:41,771:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 22:39:41,772:INFO:Deleted interrupted_model.zip
+2024-08-07 22:40:07,574:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 22:40:07,575:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 22:58:07,133:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 22:58:07,133:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 22:58:07,175:INFO:Deleted final_model.zip
+2024-08-07 22:58:07,204:INFO:Deleted interrupted_model.zip
+2024-08-07 22:58:46,528:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 22:58:46,528:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 22:58:46,555:INFO:Deleted final_model.zip
+2024-08-07 23:06:39,957:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 23:06:39,963:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 23:06:40,426:INFO:Deleted final_model.zip
+2024-08-07 23:06:40,496:INFO:Deleted interrupted_model.zip
+2024-08-07 23:09:20,457:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 23:09:20,457:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 23:20:05,957:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 23:20:05,959:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 23:20:06,226:INFO:Deleted final_model.zip
+2024-08-07 23:20:06,268:INFO:Deleted interrupted_model.zip
+2024-08-07 23:22:02,383:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 23:22:02,384:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 23:24:06,197:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 23:24:06,198:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 23:24:06,231:INFO:Deleted final_model.zip
+2024-08-07 23:24:06,287:INFO:Deleted interrupted_model.zip
+2024-08-07 23:25:43,846:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 23:25:43,846:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 23:26:40,718:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 23:26:40,719:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 23:27:06,852:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 23:27:06,854:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 23:27:07,107:ERROR:Failed to delete final_model.zip. Reason: [WinError 32] The process cannot access the file because it is being used by another process: 'final_model.zip'
+2024-08-07 23:27:07,156:INFO:Deleted interrupted_model.zip
+2024-08-07 23:27:30,952:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 23:27:30,953:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 23:27:30,990:INFO:Deleted final_model.zip
+2024-08-07 23:27:37,054:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 23:27:37,054:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 23:36:17,489:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 23:36:17,492:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 23:36:17,675:INFO:Deleted final_model.zip
+2024-08-07 23:57:07,258:INFO:Deleting files in ./tensorboard_logs
+2024-08-07 23:57:07,263:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-07 23:57:07,494:INFO:Deleted final_model.zip
+2024-08-08 00:01:13,130:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:01:13,131:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:01:13,265:INFO:Deleted final_model.zip
+2024-08-08 00:04:05,741:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:04:05,741:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:11:42,119:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:11:42,122:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:11:42,275:INFO:Deleted final_model.zip
+2024-08-08 00:12:29,231:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:12:29,232:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:12:29,275:INFO:Deleted final_model.zip
+2024-08-08 00:13:23,814:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:13:23,814:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:14:40,659:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:14:40,661:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:14:40,705:INFO:Deleted final_model.zip
+2024-08-08 00:19:07,816:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:19:07,818:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:19:07,866:INFO:Deleted final_model.zip
+2024-08-08 00:24:46,780:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:24:46,782:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:24:46,913:INFO:Deleted final_model.zip
+2024-08-08 00:24:49,786:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:24:49,786:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:27:05,458:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:27:05,459:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:27:05,597:INFO:Deleted final_model.zip
+2024-08-08 00:29:03,625:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:29:03,625:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:34:03,340:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:34:03,342:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:34:03,412:INFO:Deleted final_model.zip
+2024-08-08 00:36:49,912:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:36:49,914:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:36:49,994:INFO:Deleted final_model.zip
+2024-08-08 00:44:30,964:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:44:30,966:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:44:31,038:INFO:Deleted final_model.zip
+2024-08-08 00:47:43,276:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:47:43,278:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:47:43,350:INFO:Deleted final_model.zip
+2024-08-08 00:49:55,958:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:49:55,961:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 00:49:56,172:INFO:Deleted final_model.zip
+2024-08-08 00:49:58,932:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 00:49:58,933:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:02:07,844:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:02:07,849:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:02:07,945:ERROR:Failed to delete final_model.zip. Reason: [WinError 32] The process cannot access the file because it is being used by another process: 'final_model.zip'
+2024-08-08 01:02:07,968:INFO:Deleted interrupted_model.zip
+2024-08-08 01:04:03,523:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:04:03,523:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:04:03,645:INFO:Deleted final_model.zip
+2024-08-08 01:06:13,848:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:06:13,848:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:08:08,443:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:08:08,446:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:08:08,556:INFO:Deleted final_model.zip
+2024-08-08 01:12:11,954:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:12:11,954:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:18:40,253:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:18:40,255:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:18:40,424:INFO:Deleted final_model.zip
+2024-08-08 01:28:58,595:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:28:58,600:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:28:58,772:INFO:Deleted final_model.zip
+2024-08-08 01:28:58,772:INFO:Deleted interrupted_model.zip
+2024-08-08 01:35:33,915:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:35:33,917:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:35:34,066:INFO:Deleted final_model.zip
+2024-08-08 01:38:30,076:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:38:30,078:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:38:30,184:INFO:Deleted final_model.zip
+2024-08-08 01:44:55,110:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:44:55,113:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:44:55,335:INFO:Deleted final_model.zip
+2024-08-08 01:44:58,041:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:44:58,041:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:51:16,890:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:51:16,892:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:51:16,992:INFO:Deleted final_model.zip
+2024-08-08 01:56:04,338:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:56:04,340:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:56:04,455:INFO:Deleted final_model.zip
+2024-08-08 01:59:41,068:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 01:59:41,071:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 01:59:41,248:INFO:Deleted final_model.zip
+2024-08-08 02:02:47,581:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:02:47,585:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:02:47,649:INFO:Deleted final_model.zip
+2024-08-08 02:02:47,650:INFO:Deleted interrupted_model.zip
+2024-08-08 02:05:27,758:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:05:27,760:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:05:27,906:INFO:Deleted final_model.zip
+2024-08-08 02:06:58,863:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:06:58,865:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:06:58,903:INFO:Deleted final_model.zip
+2024-08-08 02:07:03,789:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:07:03,790:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:12:18,973:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:12:18,977:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:12:19,116:INFO:Deleted final_model.zip
+2024-08-08 02:13:07,063:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:13:07,066:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:13:07,124:INFO:Deleted final_model.zip
+2024-08-08 02:14:02,328:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:14:02,329:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:30:25,075:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:30:25,079:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:30:25,269:INFO:Deleted final_model.zip
+2024-08-08 02:34:04,832:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:34:04,834:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:34:04,939:INFO:Deleted final_model.zip
+2024-08-08 02:37:06,881:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:37:06,882:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:37:06,968:INFO:Deleted final_model.zip
+2024-08-08 02:37:14,865:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:37:14,865:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:42:20,752:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:42:20,755:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:42:20,849:INFO:Deleted final_model.zip
+2024-08-08 02:44:21,869:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:44:21,871:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:44:21,945:INFO:Deleted final_model.zip
+2024-08-08 02:54:21,068:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 02:54:21,070:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 02:54:21,154:INFO:Deleted final_model.zip
+2024-08-08 03:02:22,835:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:02:22,836:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:02:22,880:INFO:Deleted final_model.zip
+2024-08-08 03:11:44,274:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:11:44,275:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:11:44,283:INFO:Deleted final_model.zip
+2024-08-08 03:11:47,566:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:11:47,567:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:13:39,025:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:13:39,028:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:13:39,034:INFO:Deleted final_model.zip
+2024-08-08 03:14:41,138:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:14:41,139:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:14:41,168:INFO:Deleted final_model.zip
+2024-08-08 03:17:20,630:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:17:20,631:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:17:20,657:INFO:Deleted final_model.zip
+2024-08-08 03:18:28,527:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:18:28,528:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:23:34,487:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:23:34,488:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:23:34,510:INFO:Deleted final_model.zip
+2024-08-08 03:25:51,016:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:25:51,018:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:25:51,040:INFO:Deleted final_model.zip
+2024-08-08 03:25:52,027:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:25:52,027:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:29:36,961:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:29:36,963:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:29:36,982:INFO:Deleted final_model.zip
+2024-08-08 03:35:54,106:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:35:54,109:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:35:54,132:INFO:Deleted final_model.zip
+2024-08-08 03:36:16,768:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:36:16,768:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:36:50,244:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:36:50,245:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:36:50,249:INFO:Deleted final_model.zip
+2024-08-08 03:36:51,679:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:36:51,680:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:39:19,962:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:39:19,966:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:39:19,971:INFO:Deleted final_model.zip
+2024-08-08 03:40:26,700:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:40:26,701:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:41:55,992:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:41:56,005:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:41:56,025:INFO:Deleted final_model.zip
+2024-08-08 03:45:07,106:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:45:07,106:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:51:01,018:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:51:01,042:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:51:01,074:INFO:Deleted final_model.zip
+2024-08-08 03:53:14,107:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:53:14,122:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:53:14,149:INFO:Deleted final_model.zip
+2024-08-08 03:54:33,577:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:54:33,578:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:58:28,779:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:58:28,792:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 03:58:28,812:INFO:Deleted final_model.zip
+2024-08-08 03:59:33,041:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 03:59:33,042:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 15:43:11,337:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 15:43:11,372:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 15:43:11,409:INFO:Deleted final_model.zip
+2024-08-08 15:53:43,729:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 15:53:43,755:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 15:53:43,790:INFO:Deleted final_model.zip
+2024-08-08 16:01:18,777:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 16:01:18,801:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 16:01:18,825:INFO:Deleted final_model.zip
+2024-08-08 16:05:05,898:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 16:05:05,925:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 16:05:05,947:INFO:Deleted final_model.zip
+2024-08-08 16:15:38,147:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 16:15:38,178:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 16:15:38,215:INFO:Deleted final_model.zip
+2024-08-08 16:33:58,726:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 16:33:58,748:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 16:33:58,777:INFO:Deleted final_model.zip
+2024-08-08 16:44:40,955:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 16:44:40,986:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 16:44:41,023:INFO:Deleted final_model.zip
+2024-08-08 16:53:22,503:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 16:53:22,534:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 16:53:22,611:INFO:Deleted final_model.zip
+2024-08-08 17:07:54,196:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 17:07:54,281:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 17:07:54,380:INFO:Deleted final_model.zip
+2024-08-08 17:25:59,938:INFO:Deleting files in ./tensorboard_logs
+2024-08-08 17:25:59,943:INFO:Deleting files in C:\Users\marvi\Pinball Wizard\Screenshots
+2024-08-08 17:26:00,123:INFO:Deleted final_model.zip
